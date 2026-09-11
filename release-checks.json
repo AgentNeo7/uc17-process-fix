@@ -1,0 +1,43 @@
+{
+  "checked_utc": "2026-09-11T06:45:32.826442+00:00",
+  "passed": true,
+  "commands": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-I",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        ".",
+        "-p",
+        "test_tool.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_cli_example_exit_zero (test_tool.ToolTests.test_cli_example_exit_zero) ... ok\ntest_configured_mismatch_exit_one (test_tool.ToolTests.test_configured_mismatch_exit_one) ... ok\ntest_deterministic_immutable (test_tool.ToolTests.test_deterministic_immutable) ... ok\ntest_frozen_oracles (test_tool.ToolTests.test_frozen_oracles) ... ok\ntest_impossible_counts_rejected (test_tool.ToolTests.test_impossible_counts_rejected) ... ok\ntest_malformed_exit_two (test_tool.ToolTests.test_malformed_exit_two) ... ok\ntest_missing_field_exit_two (test_tool.ToolTests.test_missing_field_exit_two) ... ok\ntest_negative (test_tool.ToolTests.test_negative) ... ok\ntest_oversize_exit_two (test_tool.ToolTests.test_oversize_exit_two) ... ok\ntest_positive (test_tool.ToolTests.test_positive) ... ok\ntest_unknown (test_tool.ToolTests.test_unknown) ... ok\ntest_unknown_category_kept (test_tool.ToolTests.test_unknown_category_kept) ... ok\ntest_unknown_fields_exit_two (test_tool.ToolTests.test_unknown_fields_exit_two) ... ok\ntest_zero_exposure_not_zero_rate (test_tool.ToolTests.test_zero_exposure_not_zero_rate) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.190s\n\nOK\n",
+      "seconds": 0.25260270794387907
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-I",
+        "tool.py",
+        "--input",
+        "examples/input.json",
+        "--output",
+        "isolated-result.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.03065370803233236
+    }
+  ],
+  "test_count": 14,
+  "example_passed": true,
+  "source_sha256": "412290a7622042691fab8a5c4183c39bf10e0987813f5f3a29bcbd3154ff4298",
+  "scope": "Standalone local prototype on original synthetic cases; not full catalog acceptance"
+}

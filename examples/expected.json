@@ -1,0 +1,11 @@
+{
+  "recurrence": {
+    "after_rate": 0.05,
+    "before_rate": 0.2,
+    "causal_claim": false,
+    "confounders": [],
+    "difference": -0.15
+  },
+  "status": "hypotheses_for_review",
+  "unlinked_event_ids": []
+}

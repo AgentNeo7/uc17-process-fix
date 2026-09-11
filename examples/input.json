@@ -1,0 +1,36 @@
+{
+  "data": {
+    "after": {
+      "exposure": 100,
+      "failures": 5
+    },
+    "before": {
+      "exposure": 100,
+      "failures": 20
+    },
+    "events": [
+      {
+        "case": "c1",
+        "category": "integration",
+        "component": "adapter",
+        "id": "e1",
+        "signature": "missing_account",
+        "source": "synthetic:trace1"
+      },
+      {
+        "case": "c2",
+        "category": "integration",
+        "component": "adapter",
+        "id": "e2",
+        "signature": "missing_account",
+        "source": "synthetic:trace2"
+      }
+    ],
+    "other_changes": [],
+    "owners": {
+      "adapter": "integration-team"
+    }
+  },
+  "evidence_class": "simulated",
+  "spec_version": 1
+}

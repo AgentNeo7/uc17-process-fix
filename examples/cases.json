@@ -1,0 +1,139 @@
+[
+  {
+    "expected": {
+      "recurrence": {
+        "after_rate": 0.05,
+        "before_rate": 0.2,
+        "causal_claim": false,
+        "confounders": [],
+        "difference": -0.15
+      },
+      "status": "hypotheses_for_review",
+      "unlinked_event_ids": []
+    },
+    "input": {
+      "data": {
+        "after": {
+          "exposure": 100,
+          "failures": 5
+        },
+        "before": {
+          "exposure": 100,
+          "failures": 20
+        },
+        "events": [
+          {
+            "case": "c1",
+            "category": "integration",
+            "component": "adapter",
+            "id": "e1",
+            "signature": "missing_account",
+            "source": "synthetic:trace1"
+          },
+          {
+            "case": "c2",
+            "category": "integration",
+            "component": "adapter",
+            "id": "e2",
+            "signature": "missing_account",
+            "source": "synthetic:trace2"
+          }
+        ],
+        "other_changes": [],
+        "owners": {
+          "adapter": "integration-team"
+        }
+      },
+      "evidence_class": "simulated",
+      "spec_version": 1
+    },
+    "name": "positive"
+  },
+  {
+    "expected": {
+      "recurrence": {
+        "causal_claim": false,
+        "confounders": [
+          "routing-change"
+        ]
+      }
+    },
+    "input": {
+      "data": {
+        "after": {
+          "exposure": 100,
+          "failures": 5
+        },
+        "before": {
+          "exposure": 100,
+          "failures": 20
+        },
+        "events": [
+          {
+            "case": "c1",
+            "category": "integration",
+            "component": "adapter",
+            "id": "e1",
+            "signature": "missing_account",
+            "source": "synthetic:trace1"
+          },
+          {
+            "case": "c2",
+            "category": "integration",
+            "component": "adapter",
+            "id": "e2",
+            "signature": "missing_account",
+            "source": "synthetic:trace2"
+          }
+        ],
+        "other_changes": [
+          "routing-change"
+        ],
+        "owners": {
+          "adapter": "integration-team"
+        }
+      },
+      "evidence_class": "simulated",
+      "spec_version": 1
+    },
+    "name": "negative"
+  },
+  {
+    "expected": {
+      "hypotheses": [],
+      "status": "insufficient_linkage",
+      "unlinked_event_ids": [
+        "e3"
+      ]
+    },
+    "input": {
+      "data": {
+        "after": {
+          "exposure": 100,
+          "failures": 5
+        },
+        "before": {
+          "exposure": 100,
+          "failures": 20
+        },
+        "events": [
+          {
+            "case": null,
+            "category": "unknown",
+            "component": "unknown",
+            "id": "e3",
+            "signature": "unknown",
+            "source": "synthetic:trace3"
+          }
+        ],
+        "other_changes": [],
+        "owners": {
+          "adapter": "integration-team"
+        }
+      },
+      "evidence_class": "simulated",
+      "spec_version": 1
+    },
+    "name": "unknown"
+  }
+]

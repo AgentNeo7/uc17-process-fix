@@ -1,0 +1,33 @@
+{
+  "analysis_completed": true,
+  "evidence_class": "simulated",
+  "external_submission": false,
+  "hypotheses": [
+    {
+      "alternative": "Shared downstream symptom or incomplete instrumentation; causal direction unverified.",
+      "case_count": 2,
+      "category": "integration",
+      "claim_status": "proposed",
+      "component": "adapter",
+      "evidence_ids": [
+        "e1",
+        "e2"
+      ],
+      "owner": "integration-team",
+      "signature": "missing_account",
+      "sources": [
+        "synthetic:trace1",
+        "synthetic:trace2"
+      ]
+    }
+  ],
+  "recurrence": {
+    "after_rate": 0.05,
+    "before_rate": 0.2,
+    "causal_claim": false,
+    "confounders": [],
+    "difference": -0.15
+  },
+  "status": "hypotheses_for_review",
+  "unlinked_event_ids": []
+}

@@ -1,0 +1,10 @@
+{
+  "frozen_at_utc": "2026-09-11T06:36:21.088040+00:00",
+  "sha256": {
+    "cases.json": "8825002835ff0b786d2b53142bf51e4abdf638d2845c6985f870ec2ccd0ce60f",
+    "expected.json": "efa6fb491a3e903bab2a4de9f9afc0d8322a9ffbff71f386228f467be51503ce",
+    "input.json": "c032708b837da316ec671084bcee21d51617f9d035b2dd2860cababb0be730ae",
+    "protocol.md": "2be31ed544933fbbe177a45841effdae82ef8d4381eecc41b540c0a4d5f319a5"
+  },
+  "stage": "before implementation"
+}
