@@ -1,0 +1,59 @@
+{
+  "id": "UC17",
+  "name": "Process Fix",
+  "platform": "Salesforce",
+  "scope": "Bulk Case failure grouping by declared reason and status with unknown retention and count-only summaries.",
+  "status": "scoped_native_validated",
+  "publication": "scoped_source_preview_eligible",
+  "requirements": [
+    {
+      "id": "UC17-R01",
+      "acceptance": "Unlinked events are counted instead of silently omitted.",
+      "coverage": "User-mode Case query links exact requested Ids and retains UNLINKED result slots.",
+      "blocker": "Agent/integration events and source clock normalization absent."
+    },
+    {
+      "id": "UC17-R02",
+      "acceptance": "Categories have evidence requirements and an unknown category.",
+      "coverage": "Case Reason/Status grouping retains UNKNOWN reason.",
+      "blocker": "Expert-approved broader failure taxonomy not implemented."
+    },
+    {
+      "id": "UC17-R03",
+      "acceptance": "The tool does not describe association as established causation.",
+      "coverage": "Unique Case counts per reason/status group and association-only interpretation.",
+      "blocker": "Causal repair ranking and dependency evidence not implemented."
+    },
+    {
+      "id": "UC17-R04",
+      "acceptance": "External submission is optional; evidence remains usable without sending customer data.",
+      "coverage": "Returns minimal group/count association summaries to Flow without external submission.",
+      "blocker": "Executable synthetic reproduction and redaction/export pipeline absent."
+    },
+    {
+      "id": "UC17-R05",
+      "acceptance": "Recurrence measurements disclose confounders and unmatched cohorts.",
+      "coverage": "Duplicate Case requests do not inflate source sample counts.",
+      "blocker": "Post-fix deployment linkage, exposure cohorts and recurrence analysis absent."
+    }
+  ],
+  "blockers": [
+    "Scoped metadata compilation and unit tests passed; broader integration, denied-user scenarios, actual domain policies and independent evaluation remain incomplete.",
+    "Original acceptance requirements remain partial; owner validation, comparative benchmarks and independent evidence pending."
+  ],
+  "native_tests": [
+    "CaseFailureGroupingActionTest"
+  ],
+  "commands": [
+    "npm test",
+    "sf project deploy start --dry-run --target-org eb1a-dev --manifest manifest/package.xml --test-level RunSpecifiedTests --tests CaseFailureGroupingActionTest"
+  ],
+  "full_acceptance_complete": false,
+  "native_validation": {
+    "status": "passed",
+    "mode": "dry-run",
+    "tests_completed": 2,
+    "persisted_deployment": false,
+    "scope": "one Developer org; scoped unit tests and supplied metadata only"
+  }
+}
